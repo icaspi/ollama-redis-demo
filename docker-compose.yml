@@ -1,0 +1,14 @@
+services:
+  redis:
+    image: redis/redis-stack:7.2.0-v10
+    container_name: local-redis
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    volumes:
+      - redis-data:/data
+    environment:
+      - SPRING_AI_VECTORSTORE_REDIS_URI=redis://redis:6379
+
+volumes:
+  redis-data:
