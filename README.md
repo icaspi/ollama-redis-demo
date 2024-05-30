@@ -12,17 +12,16 @@ all running on a local machine.
 * Java 17 
 * Ollama
 
+## Chat data
+The application writes PDF files to Redis and uses this information to pass information to the prompt.
+The documents will be stored in the `./src/main/resources/docs` folder.
+Since this folder is empty by default, **add at least one document before starting the application**.
+
 ## Redis
 The Redis instance is available via Docker Compose. 
 To start Redis, execute `docker compose up -d` from the command line.
 This will start the Redis stack. This configuration also includes the Redis dashboard, 
 accessible at [http://localhost:8001](http://localhost:8001/).
-
-## Chat data
-The application writes PDF files to Redis and uses this information to pass information to the prompat. 
-The documents will be stored in the `./src/main/resources/docs` folder. 
-Since this folder is empty by default, add at least one document before starting the application. 
-One example is the [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/6.0.0/reference/pdf/spring-framework.pdf).
 
 ## Running 
 ### Intellij
